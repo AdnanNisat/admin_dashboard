@@ -2,6 +2,11 @@ html {
     height: 100%;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -25,10 +30,52 @@ body {
 .dashboard {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.mid_icons,
+.bottom_icons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
+    padding: 10px 30px;
+}
+
+.upper,
+.lower,
+.search_container,
+.notification_container,
+.header_text,
+.header_buttons {
+    display: flex;
+    align-items: center;
+}
+
+.upper,
+.lower {
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.search_container,
+.notification_container,
+.header_text,
+.header_buttons {
+    gap: 25px
+}
+
+.search_container {
+    flex-grow: 1;
 }
 
 .content {
@@ -57,10 +104,27 @@ body {
 
 .dashboard {
     background-color: #1992D4;
+    padding: 20px;
 }
 
 .header {
 
+}
+
+.header_buttons a {
+    background-color: #1992D4;
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+}
+
+input {
+    min-height: 1.5rem;
+    padding-left: 40px;    
+    flex-grow: 1;
+
+    border-radius: 30px;
+    border-width: 0px;
+    background-color: #E2E8F0;
 }
 
 .content {
@@ -80,3 +144,50 @@ body {
     height: 200px;
     border: 2px solid;
 }
+
+.dashboard a {
+    text-decoration: none;
+    color: rgb(39, 37, 37);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/*========================
+          Typography
+==========================*/
+
+h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+.header_text span {
+    font-size: large;
+}
+
+.lower a {
+    text-decoration: none;
+    color: black;
+}
+
+.header_buttons a {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.dashboard a h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.dashboard a h5 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
