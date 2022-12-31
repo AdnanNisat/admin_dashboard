@@ -21,6 +21,7 @@ body {
 
 .container {
     min-height: 100vh;
+    
 
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -80,10 +81,19 @@ body {
 
 .content {
     padding-left: 15px;
+    padding-bottom: 4rem;
 
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr 300px;
+}
+
+.content_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding-top: 1.8rem;
 }
 
 .projects {
@@ -91,7 +101,36 @@ body {
 
     display: grid;
     gap: 25px;
-    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: stretch;
+}
+
+.card  {
+    border-radius: 15px;
+    padding-right: 20px;
+
+    display: grid;
+    grid-template-columns: 20px 20px 1fr;
+    grid-template-rows: 20px 1fr 20px 20px;
+}
+
+.orange_side {
+    grid-row: 1 / 5;
+}
+
+.text_container {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+.card .icons {
+    display: flex;
+    align-self: end;
+    justify-self: flex-end;
+    gap: 1rem;
+
+    grid-row: 3 / 4;
+    grid-column: 3 / 4 ;
 }
 
 .announce_trend {
@@ -132,7 +171,7 @@ input {
 }
 
 .projects {
-    border: 2px solid red;
+    
 }
 
 .announce_trend {
@@ -140,11 +179,18 @@ input {
 }
 
 .card {
-    width: 350px;
+    min-width: 200px;
     height: 200px;
-    border: 2px solid;
+
+    background-color: #FFFFFF;
 }
 
+.orange_side {
+    height: 100%;
+    background-color: #F0B429;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
 .dashboard a {
     text-decoration: none;
     color: rgb(39, 37, 37);
