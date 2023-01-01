@@ -75,16 +75,20 @@ body {
     gap: 25px
 }
 
+.header_text {
+    max-height: 80px;
+}
+
 .search_container {
     flex-grow: 1;
 }
 
 .content {
-    padding-left: 15px;
+    padding-left: 2rem;
     padding-bottom: 4rem;
 
     display: grid;
-    gap: 15px;
+    gap: 2rem;
     grid-template-columns: 1fr 300px;
 }
 
@@ -135,6 +139,33 @@ body {
 
 .announce_trend {
     grid-column: 2 / 3;
+    padding-top: 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.announcement,
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.announcement_content_container,
+.trending_content_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 1.5rem;
+}
+
+.trending_content_container > .item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 /*========================
@@ -148,6 +179,10 @@ body {
 
 .header {
 
+}
+
+.lower h5 {
+    word-wrap: break-word;
 }
 
 .header_buttons a {
@@ -175,7 +210,7 @@ input {
 }
 
 .announce_trend {
-    border: 2px solid black;
+    
 }
 
 .card {
@@ -198,6 +233,28 @@ input {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.announcement_content_container,
+.trending_content_container {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.announcement_content_container > .item {
+    border-bottom: 1px solid #D2D2D2;
+    padding-bottom: 1rem;
+}
+
+.announcement_content_container > .item:last-child {
+    border: none;
+}
+
+.trending_content_container > .item > .photo {
+    width: 3rem;
+    height: 3rem;
+    background-color: #1992D4;
+    border-radius: 50%;
 }
 
 /*========================
@@ -237,3 +294,23 @@ h5 {
     font-weight: 900;
 }
 
+a:hover {
+    color: #F0B429;
+    opacity: 65%;
+}
+
+.dashboard a:hover,
+.header_buttons a:hover {
+    color: #FFFFFF;
+    opacity: 100%;
+}
+
+.announcement_content_container p,
+.trending_content_container p {
+    color: #4b4b4b;
+}
+
+.trending_content_container span {
+    font-weight: 900;
+    color: black;
+}
